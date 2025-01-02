@@ -17,21 +17,22 @@ public class ExtractMethod {
     public static void main(String[] args) {
         String titulo1 = "Duplicate Code";
         String titulo2 = "Extract Method";
+        printEmptyLine(4);
+        printTitle(titulo1);
+        printEmptyLine(2);
+        printTitle(titulo2);
+    }
 
-        for (int i = 0; i < 4; i++) {
+    private static void printEmptyLine(int numberOfLines) {
+        for (int i = 0; i < numberOfLines; i++) {
             System.out.println();
         }
-        for (int i = 0; i < titulo1.length(); i++) {
+    }
+
+    private static void printTitle(String title){
+        for (int i = 0; i < title.length(); i++) {
             System.out.print("*");
         }
-        System.out.println("\n" + titulo1);
-
-        for (int i = 0; i < 3; i++) {
-            System.out.println();
-        }
-        for (int i = 0; i < titulo2.length(); i++) {
-            System.out.print("-");
-        }
-        System.out.println("\n" + titulo2);
+        System.out.println("\n" + title);
     }
 }
